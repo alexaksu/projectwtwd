@@ -1,0 +1,111 @@
+/*  Project styles  */
+/*  Author: Olexandra Kononenko  */
+/*  Email: alexandrakononenko04@icloud.com  */
+
+
+/*  General styles  */
+form button {
+    background-color: #676ab8;
+    border-radius: 5px;
+    color: #fff;
+}
+ 
+ /*  Header  */
+ header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px;
+     
+ }
+ 
+ header a {
+     font-weight: bold;
+ }
+ 
+ /*  Product list  */
+ .product {
+     width: calc(33.33% - 20px); 
+     margin-bottom: 20px;
+     background-color: #f9f9f9;
+     border: 1px solid #ccc;
+     padding: 15px;
+     box-sizing: border-box; 
+     transition: transform 0.3s ease-in-out;
+ }
+ 
+ .product img {
+     width: 100%;
+     height: 300px;
+ }
+ 
+ .product button {
+     width: 100%;
+     padding: 20px;
+     border-radius: 0 0 10px 10px; 
+ }
+
+ .product_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+ }
+
+ .product:hover {
+    transform: scale(1.05);
+}
+
+/* Стилі для мобільного меню */
+.navbar {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle:hover + .navbar {
+        display: block;
+        position: absolute;
+        background: #fff; /* Ваш колір фону */
+        padding: 10px;
+        border: 1px solid #ccc; /* Ваш колір обводки */
+    }
+
+    .navbar a {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+ 
+ /* Медіа-запити */
+/* Для мобільної версії */
+@media screen and (max-width: 767px) {
+    header a {
+      display: none;
+    }
+  }
+  
+  /* Для планшетної версії */
+  @media screen and (min-width: 768px) and (max-width: 959px) {
+    .product {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  /* Для мобільної версії знову (розміщення карток в одну колонку) */
+  @media screen and (max-width: 767px) {
+    .product {
+      width: 100%;
+    }
+  }
