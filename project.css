@@ -57,7 +57,7 @@ form button {
 
 /* Стилі для мобільного меню */
 .navbar {
-    display: none;
+   /*display: none;*/
 }
 
 .menu-toggle {
